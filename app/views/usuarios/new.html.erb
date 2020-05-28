@@ -1,0 +1,9 @@
+<% provide(:button_text, 'Crear Usuario') %>
+<div class="row justify-content-center">
+  <div>
+    <h1>Nuevo Usuario</h1>
+    <%= render 'form', usuario: @usuario %>
+
+    <%= link_to 'Back', usuarios_path %>
+  </div>
+</div>

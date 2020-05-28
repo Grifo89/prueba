@@ -1,0 +1,18 @@
+<tr id="usuario_<%= usuario.id%>">
+  <td><%= usuario.nombre %></td>
+  <td><%= usuario.apellido %></td>
+  <td><%= usuario.correo %></td>
+  <td><%= usuario.telefono %></td>
+  <% if usuario.sexo_id === 1%>
+    <td> Masculino </td>
+  <% elsif usuario.sexo_id === 2 %>
+    <td> Femenino </td>
+  <% end %>
+  <% if usuario.tipo_de_usuario_id === 1 %>
+    <td> Admin </td>
+  <% elsif usuario.tipo_de_usuario_id === 2 %>
+    <td> Usuario general </td>
+  <% end %>
+  <td><%= link_to 'Edit', edit_usuario_path(usuario), data: {remote: true }%></td>
+  <td><%= link_to 'Destroy', usuario, method: :delete, data: { confirm: 'Estas seguro?', remote: true}, class: "delete"  %></td>
+</tr>

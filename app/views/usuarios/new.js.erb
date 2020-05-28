@@ -1,0 +1,2 @@
+$('.new-link').hide()
+$('#new-user').hide().parent().append("<% provide(:button_text, 'Crear Usuario') %> <%= j render 'form', usuario: @usuario %>")

@@ -1,0 +1,11 @@
+<% provide(:button_text, 'Editar Usuario') %>
+<div class="row justify-content-center">
+  <div>
+    <h1>Editar Usuario</h1>
+
+    <%= render 'form', usuario: @usuario %>
+
+    <%= link_to 'Show', @usuario %> |
+    <%= link_to 'Back', usuarios_path %>
+  </div>
+</div>

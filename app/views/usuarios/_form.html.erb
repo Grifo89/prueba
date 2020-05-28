@@ -1,0 +1,56 @@
+<div class="form-container row">
+  <%= form_with(model: usuario) do |form| %>
+  <% if usuario.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(usuario.errors.count, "error") %> prohibited this usuario from being saved:</h2>
+
+    <ul>
+      <% usuario.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, class: 'form-control', required: true %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :apellido %>
+    <%= form.text_field :apellido, class: 'form-control', required: true %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :correo %>
+    <%= form.text_field :correo, class: 'form-control', required: true %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :telefono %>
+    <%= form.text_field :telefono, class: 'form-control', required: true %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :sexo_id %>
+    <%= form.select(:sexo_id, options_for_select([['Maculino', 1], ['Femenino', 2]]), {}, {class: "form-control"}) %>
+  </div>
+
+  <div class="field form-group ">
+    <%= form.label :tipo_de_usuario_id %>
+    <%= form.select(:tipo_de_usuario_id, options_for_select([['Admin', 1], ['Usuario general', 2]]), {}, {class: "form-control"}) %>
+  </div>
+
+  <div class="form-btn">
+    <div class="field">
+      <%= form.submit yield(:button_text), class: "btn btn-primary" %>
+    </div>
+
+    <div class="field">
+      <%= link_to 'Cerrar', '#', :onclick => 'closeForm()', class: "btn btn-primary" %>
+    </div>
+  </div>
+
+  <% end %>
+</div>
