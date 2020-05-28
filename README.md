@@ -1,24 +1,45 @@
-# README
+# Rails prueba
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Modelo relacional
+![](App_Schema.png)
 
-Things you may want to cover:
 
+# Documentación técnica
+## Prerequisitos
 * Ruby version
+ 2.7.0
 
-* System dependencies
+* Dependencias del sistema
+Windows/ Unix
+Rails 6.0.2
 
-* Configuration
+## Instalación
+Clonar el proyecto
 
-* Database creation
+`git clone https://github.com/Grifo89/prueba.git`
 
-* Database initialization
+Installar Dependencias
 
-* How to run the test suite
+`bundle install --without production`
+`yarn install`
 
-* Services (job queues, cache servers, search engines, etc.)
+Crear la base de datos y poblarla
 
-* Deployment instructions
+`rails db:migrate`
 
-* ...
+`rails db:seed`
+
+Correr el servidor
+
+`rails serve`
+
+
+## Ingeniero
+
+👨‍💻 **Christian Salazar**
+
+- Github: [@grifo89](https://github.com/grifo89)
+- Twitter: [Christian_sm91](https://twitter.com/Christian_sm91)
+- LinkedIn: [Christian Salazar](https://www.linkedin.com/in/christian-salazar-mi%C3%B1o/)
+
+‍‍
