@@ -21,6 +21,7 @@ Clonar el proyecto
 Installar Dependencias
 
 `bundle install --without production`
+
 `yarn install`
 
 Crear la base de datos y poblarla
